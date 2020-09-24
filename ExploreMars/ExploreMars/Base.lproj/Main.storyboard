@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Gt-gL-pu6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mars View Controller-->
+        <scene sceneID="9UV-eh-zNc">
+            <objects>
+                <viewController id="7Gt-gL-pu6" customClass="MarsViewController" customModule="ExploreMars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EFI-xc-P7v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-qC-U8l">
+                                <rect key="frame" x="8" y="52" width="398" height="398"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hdc-qC-U8l" secondAttribute="height" multiplier="1:1" id="7FJ-3P-PAT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get out of this world!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKX-YG-mZW">
+                                <rect key="frame" x="16" y="458" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.89174871580000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyW-Hx-DkI">
+                                <rect key="frame" x="175" y="542.5" width="64" height="32"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.89174871580000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Fco-ds-omF"/>
+                                    <constraint firstAttribute="width" constant="64" id="LFV-ii-xHG"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Explore"/>
+                                <connections>
+                                    <action selector="exploreButtonTapped:" destination="7Gt-gL-pu6" eventType="touchUpInside" id="WFs-tP-qi0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nQd-cU-yr1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.89174871575342463" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nQd-cU-yr1" firstAttribute="trailing" secondItem="hdc-qC-U8l" secondAttribute="trailing" constant="8" id="1Cq-3t-wRG"/>
+                            <constraint firstItem="cyW-Hx-DkI" firstAttribute="top" secondItem="YKX-YG-mZW" secondAttribute="bottom" constant="64" id="5i2-oZ-ZEs"/>
+                            <constraint firstItem="YKX-YG-mZW" firstAttribute="top" secondItem="hdc-qC-U8l" secondAttribute="bottom" constant="8" id="HMp-hN-dL1"/>
+                            <constraint firstItem="nQd-cU-yr1" firstAttribute="trailing" secondItem="YKX-YG-mZW" secondAttribute="trailing" constant="16" id="N6p-1n-AVs"/>
+                            <constraint firstItem="YKX-YG-mZW" firstAttribute="leading" secondItem="nQd-cU-yr1" secondAttribute="leading" constant="16" id="O6d-9l-tHN"/>
+                            <constraint firstItem="cyW-Hx-DkI" firstAttribute="centerX" secondItem="nQd-cU-yr1" secondAttribute="centerX" id="dvi-wD-gqe"/>
+                            <constraint firstItem="hdc-qC-U8l" firstAttribute="top" secondItem="nQd-cU-yr1" secondAttribute="top" constant="8" id="miZ-4U-MhL"/>
+                            <constraint firstItem="hdc-qC-U8l" firstAttribute="leading" secondItem="nQd-cU-yr1" secondAttribute="leading" constant="8" id="oVJ-KT-HJX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageDescriptionLabel" destination="YKX-YG-mZW" id="2Ok-4d-2V8"/>
+                        <outlet property="marsImageView" destination="hdc-qC-U8l" id="xxW-8w-zbI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCc-nj-Nnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="337.68115942028987" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+</document>
